@@ -1,75 +1,239 @@
-# PrintResizer: Alat Pengubah Ukuran Cetak dan Peningkatan Skala (300 DPI)
+<div align="center">
 
-PrintResizer adalah aplikasi client-side berbasis React yang dirancang
-untuk secara cepat dan mudah menyiapkan file gambar Anda untuk
-pencetakan profesional. Aplikasi ini mengambil gambar sumber apa pun,
-secara otomatis mendeteksi orientasi (Potret atau Lanskap), dan
-mengkonversinya menjadi satu set standar ukuran cetak resolusi tinggi
-(300 DPI).
+# 📸 PrintResizer
 
-Karena seluruh pemrosesan dilakukan di browser (sisi klien), privasi
-data Anda terjamin, dan tidak ada beban pemrosesan yang ditempatkan pada
-server eksternal.
+### Alat Pengubah Ukuran Cetak dan Peningkatan Skala (300 DPI)
+
+Siapkan gambar Anda untuk pencetakan profesional dengan mudah dan cepat.
+
+[![React](https://img.shields.io/badge/React-18.2+-61DAFB?style=flat-square&logo=react)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-4.3+-646CFF?style=flat-square&logo=vite)](https://vitejs.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3+-06B6D4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
+
+[Demo](#-demo) • [Fitur](#-fitur-utama) • [Instalasi](#-instalasi) • [Deployment](#-deployment) • [Kontribusi](#-kontribusi)
+
+</div>
+
+---
+
+## 📝 Tentang Aplikasi
+
+**PrintResizer** adalah aplikasi web modern berbasis React yang dirancang untuk memudahkan Anda menyiapkan file gambar untuk pencetakan profesional. 
+
+Aplikasi ini:
+- ✅ Mengambil gambar sumber apa pun
+- ✅ Secara otomatis mendeteksi orientasi (Potret atau Lanskap)
+- ✅ Mengkonversinya menjadi standar ukuran cetak dengan resolusi 300 DPI
+
+**Keamanan & Privasi:** Seluruh pemrosesan dilakukan di browser (sisi klien). Data Anda tetap aman dan tidak ada beban pemrosesan pada server eksternal.
 
 ## ✨ Fitur Utama
 
--   **Pemrosesan Sisi Klien Penuh:** Semua pemrosesan gambar (pengubahan
-    ukuran, penskalaan, dan kompresi) dilakukan di perangkat pengguna.
-    Tidak ada unggahan ke server.
--   **Standar Cetak 300 DPI:** Semua file output dikodekan dengan
-    metadata 300 DPI wajib untuk memastikan pengakuan kualitas cetak
-    profesional.
--   **Deteksi Orientasi Otomatis:** Secara cerdas membalik dimensi
-    target (Potret/Lanskap) agar sesuai dengan orientasi gambar sumber
-    Anda.
--   **Ukuran Cetak Standar:** Membuat salinan siap cetak untuk ukuran
-    cetak paling umum:
-    -   **Inci:** 5x7, 8x10, 9x12, 11x14, 16x20, 18x24, 24x36\
-    -   **Metrik:** A2 (420 x 594 mm)
--   **Pemberian Nama File Kustom:** Anda dapat menentukan awalan file
-    (prefix) yang akan digunakan untuk semua file output, misalnya:
-    `[JudulAnda]_8x10in.jpg` atau `[JudulAnda]_A2.jpg`.
--   **Opsi Unduh Batch:** Unduh semua ukuran dan file asli (300 DPI)
-    dalam satu file ZIP.
+### 🖼️ Pemrosesan Gambar Tingkat Lanjut
+- **Pemrosesan Sisi Klien Penuh** - Semua pemrosesan (pengubahan ukuran, penskalaan, kompresi) dilakukan di perangkat Anda
+- **Kualitas Profesional** - Standar cetak 300 DPI untuk hasil terbaik
+- **Deteksi Orientasi Otomatis** - Secara cerdas menyesuaikan dimensi target (Potret/Lanskap)
+
+### 📐 Standar Ukuran Cetak
+Mendukung berbagai ukuran cetak populer:
+- **Inci:** 5×7, 8×10, 9×12, 11×14, 16×20, 18×24, 24×36
+- **Metrik:** A2 (420 × 594 mm)
+
+### 🎯 Fitur Tambahan
+- **Pemberian Nama File Kustom** - Atur prefix untuk semua file output (contoh: `[Nama]_8x10in.jpg`)
+- **Unduh Batch ZIP** - Download semua ukuran dalam satu file ZIP
+- **Pratinjau Real-time** - Lihat hasil sebelum download
+- **Tidak Ada Upload Server** - Privasi data terjamin
 
 ## 🚀 Teknologi yang Digunakan
 
--   **Frontend:** React (JSX)
--   **Styling:** Tailwind CSS (kelas sebaris)
--   **Image Processing:** HTML Canvas API (untuk pengubahan ukuran dan
-    resampling)
--   **Batch Download:** JSZip (dimuat secara dinamis)
+| Teknologi | Deskripsi | Link |
+|-----------|-----------|------|
+| **React** | Library UI modern | [react.dev](https://react.dev) |
+| **Vite** | Build tool super cepat | [vitejs.dev](https://vitejs.dev) |
+| **Tailwind CSS** | Styling utility-first | [tailwindcss.com](https://tailwindcss.com) |
+| **Lucide React** | Icon library cantik | [lucide.dev](https://lucide.dev) |
+| **Canvas API** | Pemrosesan gambar native | [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) |
+| **JSZip** | Batch download ZIP | [stuk/jszip](https://github.com/Stuk/jszip) |
 
-## 🛠️ Pengembangan & Deployment
+## ⚡ Instalasi & Menjalankan Lokal
 
-Proyek ini dibangun sebagai aplikasi satu file komponen React. Untuk
-mendeploy-nya, disarankan untuk mengemasnya menggunakan bundler seperti
-Vite.
+### Prasyarat
+- Node.js versi 16+ ([Download](https://nodejs.org/))
+- npm atau yarn
 
-### Menjalankan Secara Lokal (Menggunakan Vite)
+### Langkah-langkah
 
-#### 1. Buat Proyek Vite:
+**1. Clone Repository**
+```bash
+git clone https://github.com/yourusername/Upscaller.git
+cd Upscaller
+```
 
-    npm create vite@latest printresizer-app -- --template react
-    cd printresizer-app
+**2. Instal Dependencies**
+```bash
+npm install
+```
 
-#### 2. Ganti File:
+**3. Jalankan Development Server**
+```bash
+npm run dev
+```
 
-Ganti konten `src/App.jsx` dengan kode aplikasi PrintResizer ini.
+Aplikasi akan terbuka di `http://localhost:5173`
 
-#### 3. Instal Dependensi:
+**4. Build untuk Production**
+```bash
+npm run build
+```
 
-    npm install
+Output akan berada di folder `dist/`
 
-#### 4. Jalankan:
+### Script Tersedia
+```bash
+npm run dev      # Jalankan development server
+npm run build    # Build untuk production
+npm run preview  # Preview production build
+```
 
-    npm run dev
+---
 
-### Deployment di Vercel
+## 🌐 Deployment ke Vercel
 
-Karena ini adalah aplikasi statis, deployment di Vercel sangat mudah:
+PrintResizer dapat dengan mudah dideploy ke Vercel dalam hitungan menit.
 
-1.  Hubungkan repositori Git Anda ke Vercel.
-2.  Vercel akan secara otomatis mendeteksi konfigurasi build React/Vite
-    (`npm run build`).
-3.  Vercel menyajikan output dari direktori `dist` ke CDN globalnya.
+### Deployment Otomatis (Recommended)
+
+**1. Setup Repository GitHub**
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+**2. Deploy via Vercel Dashboard**
+- Buka [vercel.com/dashboard](https://vercel.com/dashboard)
+- Klik "Add New Project"
+- Pilih repository GitHub Anda
+- Vercel akan auto-detect konfigurasi
+- Klik "Deploy" ✨
+
+**3. Custom Domain (Opsional)**
+- Pergi ke "Settings" → "Domains"
+- Tambahkan domain custom Anda
+
+### Deploy via CLI
+
+```bash
+# Install Vercel CLI
+npm install -g vercel
+
+# Login
+vercel login
+
+# Deploy
+vercel
+```
+
+📚 **Dokumentasi Lengkap:** Lihat [DEPLOYMENT.md](./DEPLOYMENT.md)
+
+---
+
+## 📁 Struktur Folder
+
+```
+Upscaller/
+├── src/
+│   ├── App.jsx              # Komponen utama aplikasi
+│   ├── main.jsx             # Entry point React
+│   └── index.css            # Global styles
+├── index.html               # Template HTML
+├── package.json             # Dependencies & scripts
+├── vite.config.js           # Konfigurasi Vite
+├── vercel.json              # Konfigurasi Vercel
+├── tailwind.config.js       # Konfigurasi Tailwind
+├── postcss.config.js        # Konfigurasi PostCSS
+├── README.md                # File ini
+├── DEPLOYMENT.md            # Panduan deployment detail
+└── .gitignore               # Git ignore rules
+```
+
+---
+
+## 💡 Cara Menggunakan
+
+### 1. Upload Gambar
+Klik area upload atau drag-drop gambar Anda. Format yang didukung: JPEG, PNG, WebP, TIFF.
+
+### 2. Atur Nama File
+Masukkan prefix nama file (contoh: "Potret_Keluarga"). File output akan dinamakan:
+- `Potret_Keluarga_5x7in.jpg`
+- `Potret_Keluarga_8x10in.jpg`
+- dst...
+
+### 3. Pilih Ukuran & Download
+- Pilih ukuran cetak yang diinginkan
+- Pratinjau hasil
+- Download individual atau batch ZIP
+
+### 4. Tips Kualitas
+- Gunakan gambar sumber beresolusi tinggi (minimal 2000×3000 pixel)
+- Format RGB untuk hasil terbaik
+- Semua output akan dalam standar 300 DPI
+
+---
+
+## 🐛 Troubleshooting
+
+### Build Error saat Deploy
+```bash
+npm install --legacy-peer-deps
+npm run build
+```
+
+### Port Sudah Digunakan
+```bash
+npm run dev -- --port 3001
+```
+
+### Vercel Build Gagal
+1. Cek logs di Vercel Dashboard
+2. Pastikan `.gitignore` mengabaikan `node_modules` dan `dist`
+3. Verifikasi `vercel.json` sudah benar
+
+---
+
+## 📄 Lisensi
+
+MIT License - Silakan gunakan untuk proyek pribadi dan komersial.
+
+---
+
+## 🤝 Kontribusi
+
+Kontribusi sangat diterima! Silakan:
+
+1. Fork repository ini
+2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
+3. Commit perubahan (`git commit -m 'Add AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buka Pull Request
+
+---
+
+## 📮 Kontak & Support
+
+- 🐛 **Report Bug:** [GitHub Issues](https://github.com/yourusername/Upscaller/issues)
+- 💬 **Diskusi:** [GitHub Discussions](https://github.com/yourusername/Upscaller/discussions)
+- 📧 **Email:** [email@example.com](mailto:email@example.com)
+
+---
+
+<div align="center">
+
+**Made with ❤️ untuk fotografer dan printer profesional**
+
+[⬆ Kembali ke Atas](#-printresizer)
+
+</div>

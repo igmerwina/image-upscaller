@@ -1,0 +1,8 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "env": {
+    "VITE_ENABLE_SOURCE_MAP": "@vite_enable_source_map"
+  }
+}
