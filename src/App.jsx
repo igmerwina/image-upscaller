@@ -594,7 +594,7 @@ export default function App() {
       </div>
 
       <div className="mt-12 text-center text-gray-400 text-sm">
-        <p>© {new Date().getFullYear()} PrintResizer. Berjalan secara lokal di browser Anda.</p>
+        <p>© {new Date().getFullYear()} ImUpscaller. Berjalan secara lokal di browser Anda.</p>
       </div>
     </div>
   );

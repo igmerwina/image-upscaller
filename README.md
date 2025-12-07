@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📸 PrintResizer
+# 📸 imupscaller
 
 ### Alat Pengubah Ukuran Cetak dan Peningkatan Skala (300 DPI)
 
@@ -11,7 +11,7 @@ Siapkan gambar Anda untuk pencetakan profesional dengan mudah dan cepat.
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3+-06B6D4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
-[Demo](#-demo) • [Fitur](#-fitur-utama) • [Instalasi](#-instalasi) • [Deployment](#-deployment) • [Kontribusi](#-kontribusi)
+[Try Me!](https://image-upscaller.vercel.app) • [Fitur](#-fitur-utama) • [Instalasi](#-instalasi) • [Deployment](#-deployment) • [Kontribusi](#-kontribusi)
 
 </div>
 
@@ -19,7 +19,7 @@ Siapkan gambar Anda untuk pencetakan profesional dengan mudah dan cepat.
 
 ## 📝 Tentang Aplikasi
 
-**PrintResizer** adalah aplikasi web modern berbasis React yang dirancang untuk memudahkan Anda menyiapkan file gambar untuk pencetakan profesional. 
+**imupscaller** adalah aplikasi web modern berbasis React yang dirancang untuk memudahkan Anda menyiapkan file gambar untuk pencetakan profesional. 
 
 Aplikasi ini:
 - ✅ Mengambil gambar sumber apa pun
@@ -99,47 +99,6 @@ npm run preview  # Preview production build
 
 ---
 
-## 🌐 Deployment ke Vercel
-
-PrintResizer dapat dengan mudah dideploy ke Vercel dalam hitungan menit.
-
-### Deployment Otomatis (Recommended)
-
-**1. Setup Repository GitHub**
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
-
-**2. Deploy via Vercel Dashboard**
-- Buka [vercel.com/dashboard](https://vercel.com/dashboard)
-- Klik "Add New Project"
-- Pilih repository GitHub Anda
-- Vercel akan auto-detect konfigurasi
-- Klik "Deploy" ✨
-
-**3. Custom Domain (Opsional)**
-- Pergi ke "Settings" → "Domains"
-- Tambahkan domain custom Anda
-
-### Deploy via CLI
-
-```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Login
-vercel login
-
-# Deploy
-vercel
-```
-
-📚 **Dokumentasi Lengkap:** Lihat [DEPLOYMENT.md](./DEPLOYMENT.md)
-
----
-
 ## 📁 Struktur Folder
 
 ```
@@ -184,49 +143,9 @@ Masukkan prefix nama file (contoh: "Potret_Keluarga"). File output akan dinamaka
 
 ---
 
-## 🐛 Troubleshooting
-
-### Build Error saat Deploy
-```bash
-npm install --legacy-peer-deps
-npm run build
-```
-
-### Port Sudah Digunakan
-```bash
-npm run dev -- --port 3001
-```
-
-### Vercel Build Gagal
-1. Cek logs di Vercel Dashboard
-2. Pastikan `.gitignore` mengabaikan `node_modules` dan `dist`
-3. Verifikasi `vercel.json` sudah benar
-
----
-
 ## 📄 Lisensi
 
 MIT License - Silakan gunakan untuk proyek pribadi dan komersial.
-
----
-
-## 🤝 Kontribusi
-
-Kontribusi sangat diterima! Silakan:
-
-1. Fork repository ini
-2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
-3. Commit perubahan (`git commit -m 'Add AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Buka Pull Request
-
----
-
-## 📮 Kontak & Support
-
-- 🐛 **Report Bug:** [GitHub Issues](https://github.com/yourusername/Upscaller/issues)
-- 💬 **Diskusi:** [GitHub Discussions](https://github.com/yourusername/Upscaller/discussions)
-- 📧 **Email:** [email@example.com](mailto:email@example.com)
 
 ---
 
@@ -234,6 +153,6 @@ Kontribusi sangat diterima! Silakan:
 
 **Made with ❤️ untuk fotografer dan printer profesional**
 
-[⬆ Kembali ke Atas](#-printresizer)
+[⬆ Kembali ke Atas](#-imupscaller)
 
 </div>
