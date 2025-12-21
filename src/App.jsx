@@ -263,24 +263,9 @@ export default function App() {
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = 'high';
 
-    const sourceRatio = sourceImage.width / sourceImage.height;
-    const targetRatio = targetW / targetH;
-
-    let renderW, renderH, offsetX, offsetY;
-
-    if (sourceRatio > targetRatio) {
-      renderH = targetH;
-      renderW = sourceImage.width * (targetH / sourceImage.height);
-      offsetX = (targetW - renderW) / 2;
-      offsetY = 0;
-    } else {
-      renderW = targetW;
-      renderH = sourceImage.height * (targetW / sourceImage.width);
-      offsetX = 0;
-      offsetY = (targetH - renderH) / 2;
-    }
-
-    ctx.drawImage(sourceImage, offsetX, offsetY, renderW, renderH);
+    // STRETCH MODE: Gambar langsung di-stretch untuk mengisi canvas
+    // Tidak ada cropping, aspect ratio bisa berubah
+    ctx.drawImage(sourceImage, 0, 0, targetW, targetH);
 
     return new Promise((resolve) => {
         canvas.toBlob(async (originalBlob) => {
@@ -391,18 +376,22 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f3f4f6] font-sans text-slate-900 p-4 md:p-8 max-w-6xl mx-auto">
+    <div className="min-h-screen bg-[#f3f4f6] font-sans text-slate-900 flex flex-col">
       {/* Header */}
-      <div className="mb-8 text-center space-y-2">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">
-          Print<span className="text-blue-600">Resizer</span>
-        </h1>
-        <p className="text-gray-500 text-sm md:text-base">
-          Unggah satu gambar. Kami otomatis mendeteksi orientasi dan menskalakannya ke ukuran cetak standar (300 DPI).
-        </p>
+      <div className="bg-white border-b border-gray-200 px-4 md:px-8 py-6">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-2xl md:text-3xl font-extrabold text-gray-800 tracking-tight text-center">
+            Print<span className="text-blue-600">Resizer</span>
+          </h1>
+          <p className="text-gray-500 text-sm md:text-base text-center mt-2">
+            Unggah satu gambar. Kami otomatis mendeteksi orientasi dan menskalakannya ke ukuran cetak standar (300 DPI).
+          </p>
+        </div>
       </div>
 
-      <div className="space-y-8">
+      {/* Main Content */}
+      <div className="flex-1 px-4 md:px-8 py-6">
+        <div className="max-w-7xl mx-auto">
         {!sourceImage ? (
           <div
             onDragOver={handleDragOver}
@@ -530,7 +519,7 @@ export default function App() {
                             <img
                               src={sourceImage.src}
                               alt={label}
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-fill"
                             />
                           </div>
                         </div>
@@ -591,10 +580,14 @@ export default function App() {
             </div>
           </div>
         )}
+        </div>
       </div>
 
-      <div className="mt-12 text-center text-gray-400 text-sm">
-        <p>© {new Date().getFullYear()} ImUpscaller. Berjalan secara lokal di browser Anda.</p>
+      {/* Footer */}
+      <div className="border-t border-gray-200 bg-white px-4 py-4 mt-8">
+        <div className="max-w-7xl mx-auto text-center text-gray-500 text-xs">
+          <p>© 2025 ImUpscaller. Berjalan secara lokal di browser Anda.</p>
+        </div>
       </div>
     </div>
   );
