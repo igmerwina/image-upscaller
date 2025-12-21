@@ -1,158 +1,115 @@
 <div align="center">
 
-# 📸 imupscaller
+# 📸 ImUpScaller
 
-### Alat Pengubah Ukuran Cetak dan Peningkatan Skala (300 DPI)
+**Cetak berkualitas studio dari foto apa pun**
 
-Siapkan gambar Anda untuk pencetakan profesional dengan mudah dan cepat.
-
-[![React](https://img.shields.io/badge/React-18.2+-61DAFB?style=flat-square&logo=react)](https://react.dev)
-[![Vite](https://img.shields.io/badge/Vite-4.3+-646CFF?style=flat-square&logo=vite)](https://vitejs.dev)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3+-06B6D4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
-
-[Try Me!](https://image-upscaller.vercel.app) • [Fitur](#-fitur-utama) • [Instalasi](#-instalasi) • [Deployment](#-deployment) • [Kontribusi](#-kontribusi)
+[![React](https://img.shields.io/badge/React-18.2-61DAFB?style=flat&logo=react)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-4.5-646CFF?style=flat&logo=vite)](https://vitejs.dev)
+[![Tailwind](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=flat&logo=tailwindcss)](https://tailwindcss.com)
 
 </div>
 
 ---
 
-## 📝 Tentang Aplikasi
+## 📸 Preview
 
-**imupscaller** adalah aplikasi web modern berbasis React yang dirancang untuk memudahkan Anda menyiapkan file gambar untuk pencetakan profesional. 
+![ImUpScaller Screenshot](./public/screenshot.png)
 
-Aplikasi ini:
-- ✅ Mengambil gambar sumber apa pun
-- ✅ Secara otomatis mendeteksi orientasi (Potret atau Lanskap)
-- ✅ Mengkonversinya menjadi standar ukuran cetak dengan resolusi 300 DPI
+---
 
-**Keamanan & Privasi:** Seluruh pemrosesan dilakukan di browser (sisi klien). Data Anda tetap aman dan tidak ada beban pemrosesan pada server eksternal.
+## 🎯 Tentang
 
-## ✨ Fitur Utama
+Web app untuk menyiapkan gambar ke format cetak profesional 300 DPI. Semua proses dilakukan di browser — **100% privat, tidak ada upload ke server**.
 
-### 🖼️ Pemrosesan Gambar Tingkat Lanjut
-- **Pemrosesan Sisi Klien Penuh** - Semua pemrosesan (pengubahan ukuran, penskalaan, kompresi) dilakukan di perangkat Anda
-- **Kualitas Profesional** - Standar cetak 300 DPI untuk hasil terbaik
-- **Deteksi Orientasi Otomatis** - Secara cerdas menyesuaikan dimensi target (Potret/Lanskap)
+### Fitur Utama
+✅ **Deteksi orientasi otomatis** (Potret/Lanskap)  
+✅ **8 ukuran cetak standar** (5×7 hingga 24×36 inci + A2)  
+✅ **Pilih ukuran dengan checkbox** — download hanya yang dipilih  
+✅ **Download ZIP batch** dengan file asli + ukuran terpilih  
+✅ **Nama file kustom** (contoh: `FotoSaya_8x10in.jpg`)  
+✅ **Metadata DPI otomatis** (JFIF APP0 injection)
 
-### 📐 Standar Ukuran Cetak
-Mendukung berbagai ukuran cetak populer:
-- **Inci:** 5×7, 8×10, 9×12, 11×14, 16×20, 18×24, 24×36
-- **Metrik:** A2 (420 × 594 mm)
+---
 
-### 🎯 Fitur Tambahan
-- **Pemberian Nama File Kustom** - Atur prefix untuk semua file output (contoh: `[Nama]_8x10in.jpg`)
-- **Unduh Batch ZIP** - Download semua ukuran dalam satu file ZIP
-- **Pratinjau Real-time** - Lihat hasil sebelum download
-- **Tidak Ada Upload Server** - Privasi data terjamin
+## 🚀 Quick Start
 
-## 🚀 Teknologi yang Digunakan
-
-| Teknologi | Deskripsi | Link |
-|-----------|-----------|------|
-| **React** | Library UI modern | [react.dev](https://react.dev) |
-| **Vite** | Build tool super cepat | [vitejs.dev](https://vitejs.dev) |
-| **Tailwind CSS** | Styling utility-first | [tailwindcss.com](https://tailwindcss.com) |
-| **Lucide React** | Icon library cantik | [lucide.dev](https://lucide.dev) |
-| **Canvas API** | Pemrosesan gambar native | [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) |
-| **JSZip** | Batch download ZIP | [stuk/jszip](https://github.com/Stuk/jszip) |
-
-## ⚡ Instalasi & Menjalankan Lokal
-
-### Prasyarat
-- Node.js versi 16+ ([Download](https://nodejs.org/))
-- npm atau yarn
-
-### Langkah-langkah
-
-**1. Clone Repository**
 ```bash
-git clone https://github.com/yourusername/Upscaller.git
-cd Upscaller
-```
-
-**2. Instal Dependencies**
-```bash
+# Install dependencies
 npm install
-```
 
-**3. Jalankan Development Server**
-```bash
+# Development server
 npm run dev
-```
 
-Aplikasi akan terbuka di `http://localhost:5173`
-
-**4. Build untuk Production**
-```bash
+# Production build
 npm run build
 ```
 
-Output akan berada di folder `dist/`
+Buka `http://localhost:5173`
 
-### Script Tersedia
-```bash
-npm run dev      # Jalankan development server
-npm run build    # Build untuk production
-npm run preview  # Preview production build
+---
+
+## 📐 Ukuran Cetak Tersedia
+
+**Inci:** 5×7, 8×10, 9×12, 11×14, 16×20, 18×24, 24×36  
+**Metrik:** A2 (420×594 mm)
+
+**Mode Resize:** Stretch (no crop) — gambar di-stretch untuk mengisi frame target tanpa cropping
+
+---
+
+## 💻 Tech Stack
+
+- **React 18** + **Vite** — Fast refresh & modern bundling
+- **Tailwind CSS** — Utility-first styling
+- **Canvas API** — Client-side image processing
+- **JSZip** (via CDN) — Batch ZIP downloads
+- **Lucide React** — Modern icon system
+
+---
+
+## 📁 Struktur Project
+
+```
+src/
+  ├── App.jsx         # Main component (logic + UI)
+  ├── main.jsx        # React entry point
+  └── index.css       # Global Tailwind styles
+index.html            # HTML template
+vite.config.js        # Vite configuration
+vercel.json           # Vercel deployment config
 ```
 
 ---
 
-## 📁 Struktur Folder
+## 🎨 Cara Pakai
 
-```
-Upscaller/
-├── src/
-│   ├── App.jsx              # Komponen utama aplikasi
-│   ├── main.jsx             # Entry point React
-│   └── index.css            # Global styles
-├── index.html               # Template HTML
-├── package.json             # Dependencies & scripts
-├── vite.config.js           # Konfigurasi Vite
-├── vercel.json              # Konfigurasi Vercel
-├── tailwind.config.js       # Konfigurasi Tailwind
-├── postcss.config.js        # Konfigurasi PostCSS
-├── README.md                # File ini
-├── DEPLOYMENT.md            # Panduan deployment detail
-└── .gitignore               # Git ignore rules
-```
+1. **Upload foto** (JPG, PNG, WebP)
+2. **Set nama file** di input "Nama File Output"
+3. **Klik card ukuran** untuk pilih/batal pilih
+4. **Download:**
+   - **Individual:** Klik tombol "Download" di card
+   - **Batch ZIP:** Klik "Download Terpilih (X)" di header
 
 ---
 
-## 💡 Cara Menggunakan
+## 🔒 Privasi & Keamanan
 
-### 1. Upload Gambar
-Klik area upload atau drag-drop gambar Anda. Format yang didukung: JPEG, PNG, WebP, TIFF.
+✅ **Zero server upload** — semua proses di browser  
+✅ **Zero data tracking** — tidak ada analytics  
+✅ **Instant processing** — tidak ada queue
 
-### 2. Atur Nama File
-Masukkan prefix nama file (contoh: "Potret_Keluarga"). File output akan dinamakan:
-- `Potret_Keluarga_5x7in.jpg`
-- `Potret_Keluarga_8x10in.jpg`
-- dst...
-
-### 3. Pilih Ukuran & Download
-- Pilih ukuran cetak yang diinginkan
-- Pratinjau hasil
-- Download individual atau batch ZIP
-
-### 4. Tips Kualitas
-- Gunakan gambar sumber beresolusi tinggi (minimal 2000×3000 pixel)
-- Format RGB untuk hasil terbaik
-- Semua output akan dalam standar 300 DPI
 
 ---
 
-## 📄 Lisensi
+## 📄 License
 
-MIT License - Silakan gunakan untuk proyek pribadi dan komersial.
+MIT — Free for personal & commercial use
 
 ---
 
 <div align="center">
 
-**Made with ❤️ untuk fotografer dan printer profesional**
-
-[⬆ Kembali ke Atas](#-imupscaller)
+**Made with ❤️ for everyone**
 
 </div>
