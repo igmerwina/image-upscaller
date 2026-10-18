@@ -61,7 +61,7 @@ Buka `http://localhost:5173`
 ## 💻 Tech Stack
 
 - **React 18** + **Vite** — Fast refresh & modern bundling
-- **Tailwind CSS** — Utility-first styling
+- **Tailwind CSS** — Utility-first styling (Instrument Serif + Inter)
 - **Canvas API** — Client-side image processing
 - **JSZip** (via CDN) — Batch ZIP downloads
 - **Lucide React** — Modern icon system
@@ -84,12 +84,12 @@ vercel.json           # Vercel deployment config
 
 ## 🎨 Cara Pakai
 
-1. **Upload foto** (JPG, PNG, WebP)
-2. **Set nama file** di input "Nama File Output"
-3. **Klik card ukuran** untuk pilih/batal pilih
+1. **Upload foto** (JPG, PNG, WebP) — taruh di kertas atau klik "Pilih foto"
+2. **Set nama file** di input "Nama file"
+3. **Klik pratinjau ukuran** untuk pilih/batal pilih
 4. **Download:**
-   - **Individual:** Klik tombol "Download" di card
-   - **Batch ZIP:** Klik "Download Terpilih (X)" di header
+   - **Individual:** Klik "Unduh ukuran ini" di bawah tiap ukuran
+   - **Batch ZIP:** Klik "Unduh ZIP" di panel kiri
 
 ---
 
