@@ -14,7 +14,7 @@
 
 ## 📸 Preview
 
-![ImUpScaller Screenshot](./public/screenshot.png)
+![ImUpScaller Screenshot](./public/screenshot-cyanotype.png)
 
 ---
 
