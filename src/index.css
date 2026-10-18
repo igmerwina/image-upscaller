@@ -2,25 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html, body, #root {
-  margin: 0;
-  padding: 0;
-  width: 100%;
   min-height: 100vh;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply bg-paper text-ink font-sans antialiased;
+  /* Kertas berpetak tipis seperti meja cetak */
+  background-image:
+    linear-gradient(to right, rgb(201 195 177 / .55) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(201 195 177 / .55) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
 #root {
@@ -28,7 +20,15 @@ body {
   flex-direction: column;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.sheet {
+  @apply bg-sheet;
+  box-shadow: 0 1px 0 rgb(30 29 26 / .06), 0 18px 40px -18px rgb(30 29 26 / .35);
+}
+
+:focus-visible {
+  @apply outline outline-2 outline-offset-2 outline-prussian;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
 }
